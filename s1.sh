@@ -26,7 +26,7 @@ clean()
 end()
 {
    echo "Updating is complete!"
-   exit
+   exit 0
 }
 
 
@@ -58,5 +58,6 @@ then
 fi
 
 # if the user hasn't entered any arguments
-echo "You have not privided any comman-line argument" 
+echo "You have not privided a comman-line argument" 
 echo "Try '--u' for updating or '--uc' for updating and cleaning"
+exit 2

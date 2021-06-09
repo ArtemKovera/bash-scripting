@@ -14,3 +14,4 @@ then
 else
     echo "mismatch"
 fi
+exit 0

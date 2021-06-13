@@ -12,7 +12,7 @@ if [[ "$name" == "" ]]
 then
     echo "You've entered an empty name"
     echo "Please provide your true name"
-    exit
+    exit 1
 fi
     
 #Entering age
@@ -23,17 +23,18 @@ if [[ $age -lt 1 ]]
 then
     echo "You've entered an appropriate age value"
     echo "Please provide your true age"
-    exit
+    exit 2
 elif [[ $age -le 16 ]]
 then
     echo "$name, your group is child"
-    exit
+    exit 0
 elif [[ $age -ge 17 && $age -le 25 ]]
 then
     echo "$name, your group is youth"
-    exit
+    exit 0
 elif [[ $age -ge 26 ]]
 then
     echo "$name, your group is adult"
-    exit
+    exit 0
 fi
+exit 3
